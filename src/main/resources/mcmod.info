@@ -2,12 +2,12 @@
   {
     "modid": "forma",
     "name": "Forma",
-    "description": "An in-game world editor: free camera, panels, selections, shapes and undo/redo.",
+    "description": "An in-game world editor with a free-fly camera, selections, terrain brushes, shapes, schematics and full undo/redo. No commands needed.",
     "version": "${version}",
     "mcversion": "1.12.2",
-    "authorList": [],
+    "authorList": ["Kristihack"],
     "credits": "",
-    "logoFile": "",
+    "logoFile": "assets/forma/logo.png",
     "url": "",
     "dependencies": []
   }
