@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.4.9'
+}
+
+group = 'com.forma'
+version = '0.3.0'
+base.archivesName = 'Forma-1.12.2'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+        // Azul ships a native Apple Silicon JDK 8; Temurin 8 is Intel-only.
+        vendor = JvmVendorSpec.AZUL
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+minecraft {
+    mcVersion = '1.12.2'
+    mcpMappingChannel = 'stable'
+    mcpMappingVersion = '39'
+    username = 'Developer'
+    injectedTags.put('VERSION', project.version)
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('mcmod.info') {
+        expand('version': project.version)
+    }
+}

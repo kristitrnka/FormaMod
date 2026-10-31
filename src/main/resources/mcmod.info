@@ -1,0 +1,14 @@
+[
+  {
+    "modid": "forma",
+    "name": "Forma",
+    "description": "An in-game world editor: free camera, panels, selections, shapes and undo/redo.",
+    "version": "${version}",
+    "mcversion": "1.12.2",
+    "authorList": [],
+    "credits": "",
+    "logoFile": "",
+    "url": "",
+    "dependencies": []
+  }
+]
